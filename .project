@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>BE-week13-SpringBoot.png</name>
+			<type>1</type>
+			<location>C:/Users/Cody X/Desktop/BE-week13-SpringBoot.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
