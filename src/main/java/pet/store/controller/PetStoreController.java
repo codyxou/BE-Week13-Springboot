@@ -9,24 +9,23 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
-import pet.store.controller.StoreController;
-import pet.store.controller.model.CustomerData;
-import pet.store.service.PetService;
+import pet.store.controller.model.PetStoreData;
+import pet.store.service.PetStoreService;
 
 @RestController
 @RequestMapping("/pet_store")
 @Slf4j
 
-	public class StoreController {
+	public class PetStoreController {
 		@Autowired
-		private PetService petService;
+		private PetStoreService petStoreService;
 		
-		@PostMapping("/customer")
+		@PostMapping("/pet_store")
 		@ResponseStatus(code = HttpStatus.CREATED)
-		public CustomerData insertCustomer(
-				@RequestBody CustomerData customerData) {
-			log.info("Creating customer {}", customerData);
-			return petService.saveCustomer(customerData);
+		public PetStoreData insertPetStore(
+				@RequestBody PetStoreData petStoreData) {
+			log.info("Creating Pet STore {}", petStoreData);
+			return petStoreService.savePetStore(petStoreData);
 			
 		}
 

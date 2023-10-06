@@ -2,7 +2,6 @@ package pet.store.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,6 +26,6 @@ public class Employee {
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "pet_store_id", foreignKey =  @ForeignKey(name = "pet_store_id"))
+	@JoinColumn(name = "pet_store_id")
 	private PetStore petStore;
 }
