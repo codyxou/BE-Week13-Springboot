@@ -1,3 +1,0 @@
-INSERT INTO customer (customer_first_name, customer_last_name, customer_email) VALUES ("Lilly", "Bear", "lb@beans.com");
-INSERT INTO employee (employee_first_name, employee_last_name, employee_phone, employee_job_title) VALUES ("Gus", "Bus", "4396078215", "Pet Specialist");
-INSERT INTO pet_store (pet_store_name, pet_store_address, pet_store_city, pet_store_state, pet_store_zip, pet_store_phone) VALUES ("Mo Pets Less Problems", "123 Main St", "Lincoln", "NE", "76045", "4634123698");

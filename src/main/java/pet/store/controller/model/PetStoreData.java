@@ -15,6 +15,7 @@ public class PetStoreData {
 	private Long petStoreId;
 	private String petStoreName;
 	private String petStoreAddress;
+	private String petStoreCity;
 	private String petStoreState;
 	private String petStoreZip;
 	private String petStorePhone;
@@ -27,6 +28,7 @@ public class PetStoreData {
 		petStoreId = petStore.getPetStoreId();
 		petStoreName = petStore.getPetStoreName();
 		petStoreAddress = petStore.getPetStoreAddress();
+		petStoreCity = petStore.getPetStoreCity();
 		petStoreState = petStore.getPetStoreState();
 		petStoreZip = petStore.getPetStoreZip();
 		petStorePhone = petStore.getPetStorePhone();
@@ -82,7 +84,11 @@ public class PetStoreData {
 			private String employeeJobTitle;
 			
 			public PetStoreEmployee(Employee employee) {
-				
+				employeeId =  employee.getEmployeeId();
+				employee_first_name = employee.getEmployee_first_name();
+				employee_last_name = employee.getEmployee_last_name();
+				employeePhone = employee.getEmployeePhone();
+				employeeJobTitle = employee.getEmployeeJobTitle();
 			}
 			
 		}
