@@ -34,22 +34,11 @@ public class PetStoreData {
 		petStorePhone = petStore.getPetStorePhone();
 		
         for (Customer customer : petStore.getCustomers()) {
-            PetStoreCustomer petStoreCustomer = new PetStoreCustomer();
-            petStoreCustomer.setCustomerId(customer.getCustomerId());
-            petStoreCustomer.setCustomerFirstName(customer.getCustomerFirstName());
-            petStoreCustomer.setCustomerLastName(customer.getCustomerLastName());
-            petStoreCustomer.setCustomerEmail(customer.getCustomerEmail());
-            customers.add(petStoreCustomer);
+            customers.add(new PetStoreCustomer(customer));
         }
 
         for (Employee employee : petStore.getEmployees()) {
-            PetStoreEmployee petStoreEmployee = new PetStoreEmployee();
-            petStoreEmployee.setEmployeeId(employee.getEmployeeId());
-            petStoreEmployee.setEmployee_first_name(employee.getEmployee_first_name());
-            petStoreEmployee.setEmployee_last_name(employee.getEmployee_last_name());
-            petStoreEmployee.setEmployeePhone(employee.getEmployeePhone());
-            petStoreEmployee.setEmployeeJobTitle(employee.getEmployeeJobTitle());
-            employees.add(petStoreEmployee);
+            employees.add(new PetStoreEmployee(employee));
         }
 	}
 

@@ -19,6 +19,7 @@ public class GlobalErrorHandler {
 	@ResponseStatus(code = HttpStatus.NOT_FOUND)
 	public Map<String, String> handleIllegalStateException (NoSuchElementException ex) {
 		
+		//using Slf4j to log error 
 		log.error("Error: {}", ex.toString());
 		Map<String, String> errorResponse = new HashMap<>();
 		errorResponse.put("message", ex.toString());
